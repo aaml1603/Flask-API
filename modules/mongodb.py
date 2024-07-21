@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 class Database:
     def __init__(self):
-        self.client = pymongo.MongoClient("mongodb+srv://aaml1603:Doral11386.@cluster0.lwei9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        self.client = pymongo.MongoClient("mongo_cluster_url")
         self.accountsdb = self.client['accounts']
         self.userscol = self.accountsdb['users']
     
